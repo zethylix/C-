@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\API\\API.csproj": {}
+    "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\API\\API.csproj": {
+    "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\palermoo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\API\\obj\\",
+        "projectPath": "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\zethy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\palermoo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\zethy\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -27,8 +27,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -78,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Users\\zethy\\.dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -496,17 +496,17 @@
         }
       }
     },
-    "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\Domain\\Domain.csproj": {
+    "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\palermoo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\zethy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\palermoo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\zethy\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -553,7 +553,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Users\\zethy\\.dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -831,17 +831,17 @@
         }
       }
     },
-    "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\palermoo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\zethy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\palermoo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\zethy\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -854,8 +854,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\palermoo\\RiderProjects\\GroupeBTodoAPI\\Domain\\Domain.csproj"
+              "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\zethy\\OneDrive - Haute Ecole Louvain en Hainaut\\B3\\AEMT\\C#DotNet\\GroupeBTodoAPI\\GroupeBTodoAPI\\Domain\\Domain.csproj"
               }
             }
           }
@@ -902,7 +902,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Users\\zethy\\.dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

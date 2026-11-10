@@ -8,27 +8,28 @@ public class TodoRepository(Database database) : ITodoRepository
 {
     private Database _database = database;
 
-    public Todo? GetById(int id)
+    public async Task<Todo?> GetById(int id)
     {
-        using var connection = _database.GetConnection();
-        connection.Open();
+        await using var connection = _database.GetConnection();
+        await connection.OpenAsync();
         var command = connection.CreateCommand();
         command.CommandText = $"SELECT * FROM Items WHERE Id = @Id";
         command.Parameters.Add("@Id", SqlDbType.Int).Value = id;
-        var reader = command.ExecuteReader();
-        return !reader.Read() ? null : Map(reader);
+        var reader = await command.ExecuteReaderAsync();
+        var hasData = await reader.ReadAsync();
+        return !hasData ? null : Map(reader);
     }
 
-    public List<Todo> GetAll()
+    public async Task<List<Todo>> GetAll()
     {
-        using var connection = _database.GetConnection();
-        connection.Open();
+        await using var connection = _database.GetConnection();
+        await connection.OpenAsync();
         var command = connection.CreateCommand();
         command.CommandText = $"SELECT * FROM Items";
 
         var list = new List<Todo>();
 
-        using var reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+        await using var reader = await command.ExecuteReaderAsync(CommandBehavior.CloseConnection);
 
         while (reader.Read())
             list.Add(Map(reader));
@@ -36,46 +37,46 @@ public class TodoRepository(Database database) : ITodoRepository
         return list;
     }
 
-    public Todo Create(Todo todo)
+    public async Task<Todo> Create(Todo todo)
     {
-        using var connection = _database.GetConnection();
-        connection.Open();
+        await using var connection = _database.GetConnection();
+        await connection.OpenAsync();
         var command = connection.CreateCommand();
         command.CommandText = $"INSERT INTO Items(Title, Done) OUTPUT INSERTED.Id VALUES(@Title, @Done)";
         command.Parameters.Add("@Title", SqlDbType.VarChar, 200).Value = todo.Title;
         command.Parameters.Add("@Done", SqlDbType.Bit).Value = todo.Done;
 
-        var id = (int)command.ExecuteScalar();
+        var id = await command.ExecuteScalarAsync();
 
         return new Todo
         {
-            Id = id,
+            Id = (int) id!,
             Title = todo.Title,
             Done = todo.Done
         };
     }
 
-    public bool Update(Todo todo)
+    public async Task<bool> Update(Todo todo)
     {
-        using var connection = _database.GetConnection();
-        connection.Open();
+        await using var connection = _database.GetConnection();
+        await connection.OpenAsync();
         var command = connection.CreateCommand();
         command.CommandText = $"UPDATE Items SET Title = @Title, Done = @Done WHERE Id = @Id";
         command.Parameters.Add("@Title", SqlDbType.VarChar, 200).Value = todo.Title;
         command.Parameters.Add("@Done", SqlDbType.Bit).Value = todo.Done;
         command.Parameters.Add("@Id", SqlDbType.Int).Value = todo.Id;
 
-        return command.ExecuteNonQuery() > 0;
+        return await command.ExecuteNonQueryAsync() > 0;
     }
 
-    public bool Delete(int id)
+    public async Task<bool> Delete(int id)
     {
-        using var connection = _database.GetConnection();
-        connection.Open();
+        await using var connection = _database.GetConnection();
+        await connection.OpenAsync();
         var command = connection.CreateCommand();
         command.CommandText = $"DELETE FROM Items WHERE Id = @Id";
         command.Parameters.Add("@Id", SqlDbType.Int).Value = id;
-        return command.ExecuteNonQuery() > 0;
+        return await command.ExecuteNonQueryAsync() > 0;
     }
 
     private static Todo Map(SqlDataReader reader) => new()
