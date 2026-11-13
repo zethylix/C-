@@ -1,7 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
-namespace Infrastructure;
+namespace Infrastructure.ADO;
 
 public class Database(IConfiguration configuration)
 {

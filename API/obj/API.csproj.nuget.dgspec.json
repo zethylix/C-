@@ -1229,6 +1229,10 @@
               "target": "Package",
               "version": "[7.1.1, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[10.0.15, )"
+            },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[11.0.0-rc.3.26522.148, )"

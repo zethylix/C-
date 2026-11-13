@@ -145,3 +145,7 @@ C:\Users\zethy\OneDrive - Haute Ecole Louvain en Hainaut\B3\AEMT\C#DotNet\Groupe
 C:\Users\zethy\OneDrive - Haute Ecole Louvain en Hainaut\B3\AEMT\C#DotNet\GroupeBTodoAPI\GroupeBTodoAPI\API\obj\Debug\net10.0\API.pdb
 C:\Users\zethy\OneDrive - Haute Ecole Louvain en Hainaut\B3\AEMT\C#DotNet\GroupeBTodoAPI\GroupeBTodoAPI\API\obj\Debug\net10.0\API.genruntimeconfig.cache
 C:\Users\zethy\OneDrive - Haute Ecole Louvain en Hainaut\B3\AEMT\C#DotNet\GroupeBTodoAPI\GroupeBTodoAPI\API\obj\Debug\net10.0\ref\API.dll
+C:\Users\zethy\OneDrive - Haute Ecole Louvain en Hainaut\B3\AEMT\C#DotNet\GroupeBTodoAPI\GroupeBTodoAPI\API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\zethy\OneDrive - Haute Ecole Louvain en Hainaut\B3\AEMT\C#DotNet\GroupeBTodoAPI\GroupeBTodoAPI\API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\zethy\OneDrive - Haute Ecole Louvain en Hainaut\B3\AEMT\C#DotNet\GroupeBTodoAPI\GroupeBTodoAPI\API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\zethy\OneDrive - Haute Ecole Louvain en Hainaut\B3\AEMT\C#DotNet\GroupeBTodoAPI\GroupeBTodoAPI\API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll

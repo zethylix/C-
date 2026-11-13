@@ -3,7 +3,7 @@ using Application.Abstractions;
 using Domain;
 using Microsoft.Data.SqlClient;
 
-namespace Infrastructure;
+namespace Infrastructure.ADO;
 
 public class TodoRepository(Database database) : ITodoRepository
 {
