@@ -1,3 +1,4 @@
+using Application;
 using Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,8 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
-builder.Services.AddScoped<Database>();
-builder.Services.AddScoped<ITodoRepository, TodoRepository>();
+builder.Services.AddInfrastructure();
+builder.Services.AddApplication();
+
 
 var app = builder.Build();
 

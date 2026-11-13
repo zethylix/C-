@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using Application.Abstractions;
 using Domain;
 using Microsoft.Data.SqlClient;
 
@@ -6,14 +7,14 @@ namespace Infrastructure;
 
 public class TodoRepository(Database database) : ITodoRepository
 {
-    private Database _database = database;
+    private readonly Database _database = database;
 
     public async Task<Todo?> GetById(int id)
     {
         await using var connection = _database.GetConnection();
         await connection.OpenAsync();
         var command = connection.CreateCommand();
-        command.CommandText = $"SELECT * FROM Items WHERE Id = @Id";
+        command.CommandText = "SELECT * FROM Items WHERE Id = @Id";
         command.Parameters.Add("@Id", SqlDbType.Int).Value = id;
         var reader = await command.ExecuteReaderAsync();
         var hasData = await reader.ReadAsync();
@@ -25,7 +26,7 @@ public class TodoRepository(Database database) : ITodoRepository
         await using var connection = _database.GetConnection();
         await connection.OpenAsync();
         var command = connection.CreateCommand();
-        command.CommandText = $"SELECT * FROM Items";
+        command.CommandText = "SELECT * FROM Items";
 
         var list = new List<Todo>();
 
@@ -42,7 +43,7 @@ public class TodoRepository(Database database) : ITodoRepository
         await using var connection = _database.GetConnection();
         await connection.OpenAsync();
         var command = connection.CreateCommand();
-        command.CommandText = $"INSERT INTO Items(Title, Done) OUTPUT INSERTED.Id VALUES(@Title, @Done)";
+        command.CommandText = "INSERT INTO Items(Title, Done) OUTPUT INSERTED.Id VALUES(@Title, @Done)";
         command.Parameters.Add("@Title", SqlDbType.VarChar, 200).Value = todo.Title;
         command.Parameters.Add("@Done", SqlDbType.Bit).Value = todo.Done;
 
@@ -50,7 +51,7 @@ public class TodoRepository(Database database) : ITodoRepository
 
         return new Todo
         {
-            Id = (int) id!,
+            Id = (int)id!,
             Title = todo.Title,
             Done = todo.Done
         };
@@ -61,7 +62,7 @@ public class TodoRepository(Database database) : ITodoRepository
         await using var connection = _database.GetConnection();
         await connection.OpenAsync();
         var command = connection.CreateCommand();
-        command.CommandText = $"UPDATE Items SET Title = @Title, Done = @Done WHERE Id = @Id";
+        command.CommandText = "UPDATE Items SET Title = @Title, Done = @Done WHERE Id = @Id";
         command.Parameters.Add("@Title", SqlDbType.VarChar, 200).Value = todo.Title;
         command.Parameters.Add("@Done", SqlDbType.Bit).Value = todo.Done;
         command.Parameters.Add("@Id", SqlDbType.Int).Value = todo.Id;
@@ -74,15 +75,18 @@ public class TodoRepository(Database database) : ITodoRepository
         await using var connection = _database.GetConnection();
         await connection.OpenAsync();
         var command = connection.CreateCommand();
-        command.CommandText = $"DELETE FROM Items WHERE Id = @Id";
+        command.CommandText = "DELETE FROM Items WHERE Id = @Id";
         command.Parameters.Add("@Id", SqlDbType.Int).Value = id;
         return await command.ExecuteNonQueryAsync() > 0;
     }
 
-    private static Todo Map(SqlDataReader reader) => new()
+    private static Todo Map(SqlDataReader reader)
     {
-        Id = reader.GetInt32(reader.GetOrdinal("Id")),
-        Title = reader.GetString(reader.GetOrdinal("Title")),
-        Done = reader.GetBoolean(reader.GetOrdinal("Done"))
-    };
+        return new Todo
+        {
+            Id = reader.GetInt32(reader.GetOrdinal("Id")),
+            Title = reader.GetString(reader.GetOrdinal("Title")),
+            Done = reader.GetBoolean(reader.GetOrdinal("Done"))
+        };
+    }
 }

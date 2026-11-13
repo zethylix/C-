@@ -1,6 +1,6 @@
 ﻿using Domain;
 
-namespace Infrastructure;
+namespace Application.Abstractions;
 
 public interface ITodoRepository
 {
